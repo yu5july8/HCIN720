@@ -1,3 +1,6 @@
+//we need motion sensor, Temp humidity and ultrasonic sensor sketch in this 
+
+
 #include <Grove_LED_Bar.h>
 
 #define LED_NUM 24
