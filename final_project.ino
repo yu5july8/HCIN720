@@ -18,7 +18,7 @@ void loop() {
  
   soundValue >>= 5; //bitshift operation 
   Serial.println(soundValue); //print the value of sound sensor
-  int level=map(soundValue, 0,90, 0, 24);
+  int level=map(soundValue, 0,90, 0, 24);// we should take a look into the measurememt of number for sound value 
   delay(5000); //a shorter delay between readings
 
 }
