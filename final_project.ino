@@ -8,7 +8,7 @@ int sound_sensor = A2; //assign to pin A2
 
 void setup() {
   Serial.begin(115200); //begin Serial Communication
-
+  LEDBar.begin();
 }
 
 void loop() {
