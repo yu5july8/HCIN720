@@ -1,10 +1,18 @@
 //we need motion sensor, Temp humidity and ultrasonic sensor sketch in this 
 
-
+#include <DHT.h>
+#include <Ultrasonic.h>
 #include <Grove_LED_Bar.h>
 
+#define DHTPIN 
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+#define MOTION_SENSOR
 #define LED_NUM 24
 Grove_LED_Bar LEDBar(0,1,0,LED_CIRCULAR_24); //clock pin, data pin and orientation
+
+Ultrasonic ultrasonic(); //pin 
 
 int sound_sensor = A2; //assign to pin A2
 
@@ -12,6 +20,8 @@ int sound_sensor = A2; //assign to pin A2
 void setup() {
   Serial.begin(115200); //begin Serial Communication
   LEDBar.begin();
+  dht.begin();
+  pinMode(MOTION_SENSOR, INPUT);
 }
 
 void loop() {
