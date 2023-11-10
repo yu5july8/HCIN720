@@ -22,17 +22,17 @@ void setup() {
   LEDBar.begin();
   dht.begin();
   pinMode(MOTION_SENSOR, INPUT);
-  long RangeInInches
+  long RangeInInches// set firm orginal range
   origin=ultrasonic.MeasureInInches();
   Serial.println(ultrasonic.RangeInInches);
 }
 
 void loop() {
-  long RangeInInches
+  long RangeInInches//remeasure the range 
   Serial.println("The distance to obstacle in front is: ");
   after=ultrasonic.MeasureInInches();
   
-  if (origin != after){
+  if (origin != after){  // compare from orginal range, if it is different, it will triger other sensors
     int soundValue = 0; //create variable to store many different readings
     for (int i = 0; i < 32; i++) //create a for loop to read 
     { soundValue += analogRead(sound_sensor);  } //read the sound sensor
