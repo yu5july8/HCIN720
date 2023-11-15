@@ -1,8 +1,8 @@
 //we need motion sensor, Temp humidity and ultrasonic sensor sketch in this 
 
-#include <DHT.h>
-#include <Ultrasonic.h>
-#include <Grove_LED_Bar.h>
+#include <DHT.h>//temp hum sensor 
+#include <Ultrasonic.h>//ultrasound  
+#include <Grove_LED_Bar.h>//Grove LED bar
 
 #define DHTPIN 
 #define DHTTYPE DHT11
